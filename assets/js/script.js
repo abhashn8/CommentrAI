@@ -59,11 +59,7 @@ async function fetchData(matchId) {
 		const response = await fetch(`https://cricbuzz-cricket.p.rapidapi.com/mcenter/v1/${matchId}/scard`, {
 			method: 'GET',
 			headers: {
-<<<<<<< HEAD
 				// 8 
-=======
-				// 8
->>>>>>> 67a0dea4e7081fd67d9492453f7925d751baf32c
 				'X-RapidAPI-Key': '85534a32e2msh413b9cae9a18949p1403e2jsn1f4d0abac534',
 				// 'X-RapidAPI-Key': '7f97c88be2mshb65b57c8d2913cdp1faf78jsn88326a15efcf',
 				'X-RapidAPI-Host': 'cricbuzz-cricket.p.rapidapi.com'
