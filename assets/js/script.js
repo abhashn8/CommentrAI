@@ -86,7 +86,7 @@ async function fetchData(matchId) {
 		let battingOvers = extractScoreCards.scoreDetails.overs
 
 		extraBatting.innerText = `${battingRuns} - ${battingWic}/ ${battingOvers}`
-		extraBattingOvers.innerText = battingRunRate
+		extraBattingOvers.innerText = `(${battingRunRate})`
 
 		// extractScoreCards.forEach(extractScoreCard => {
 			let batsMansData = extractScoreCards.batTeamDetails.batsmenData;
