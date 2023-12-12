@@ -55,7 +55,9 @@ async function fetchData(matchId) {
 		const response = await fetch(`https://cricbuzz-cricket.p.rapidapi.com/mcenter/v1/${matchId}/scard`, {
 			method: 'GET',
 			headers: {
-				'X-RapidAPI-Key': '7f97c88be2mshb65b57c8d2913cdp1faf78jsn88326a15efcf',
+				// 8
+				'X-RapidAPI-Key': '85534a32e2msh413b9cae9a18949p1403e2jsn1f4d0abac534',
+				// 'X-RapidAPI-Key': '7f97c88be2mshb65b57c8d2913cdp1faf78jsn88326a15efcf',
 				'X-RapidAPI-Host': 'cricbuzz-cricket.p.rapidapi.com'
 			}
 		});
@@ -112,13 +114,13 @@ const matchOptions = {
 	method: 'GET',
 	headers: {
 		// 8
-		// 'X-RapidAPI-Key': '85534a32e2msh413b9cae9a18949p1403e2jsn1f4d0abac534',
+		'X-RapidAPI-Key': '85534a32e2msh413b9cae9a18949p1403e2jsn1f4d0abac534',
 
 		// 789
 		// 'X-RapidAPI-Key': 'c1bed9ec45msh5b49abb77b7300ep15fed0jsn0d8cca958638',
 
 		// college 
-		'X-RapidAPI-Key': '7f97c88be2mshb65b57c8d2913cdp1faf78jsn88326a15efcf',
+		// 'X-RapidAPI-Key': '7f97c88be2mshb65b57c8d2913cdp1faf78jsn88326a15efcf',
 
 
 		'X-RapidAPI-Host': 'cricbuzz-cricket.p.rapidapi.com'
@@ -392,12 +394,12 @@ async function displayMatches(url, matchContainer) {
 				method: 'GET',
 				headers: {
 					// 8 
-					// 'X-RapidAPI-Key': '85534a32e2msh413b9cae9a18949p1403e2jsn1f4d0abac534',
+					'X-RapidAPI-Key': '85534a32e2msh413b9cae9a18949p1403e2jsn1f4d0abac534',
 					// 789
 					// 'X-RapidAPI-Key': 'c1bed9ec45msh5b49abb77b7300ep15fed0jsn0d8cca958638',
 
 					// college
-					'X-RapidAPI-Key': '7f97c88be2mshb65b57c8d2913cdp1faf78jsn88326a15efcf',
+					// 'X-RapidAPI-Key': '7f97c88be2mshb65b57c8d2913cdp1faf78jsn88326a15efcf',
 
 					'X-RapidAPI-Host': 'cricbuzz-cricket.p.rapidapi.com'
 				}
