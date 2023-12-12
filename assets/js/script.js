@@ -60,8 +60,11 @@ async function fetchData(matchId) {
 			method: 'GET',
 			headers: {
 				// 8 
-				'X-RapidAPI-Key': '85534a32e2msh413b9cae9a18949p1403e2jsn1f4d0abac534',
-				// 'X-RapidAPI-Key': '7f97c88be2mshb65b57c8d2913cdp1faf78jsn88326a15efcf',
+				//'X-RapidAPI-Key': '85534a32e2msh413b9cae9a18949p1403e2jsn1f4d0abac534',
+				//789
+				'X-RapidAPI-Key': 'c1bed9ec45msh5b49abb77b7300ep15fed0jsn0d8cca958638',
+
+			       // 'X-RapidAPI-Key': '7f97c88be2mshb65b57c8d2913cdp1faf78jsn88326a15efcf',
 				'X-RapidAPI-Host': 'cricbuzz-cricket.p.rapidapi.com'
 			}
 		});
@@ -138,7 +141,7 @@ const matchOptions = {
 		'X-RapidAPI-Key': '85534a32e2msh413b9cae9a18949p1403e2jsn1f4d0abac534',
 
 		// 789
-		// 'X-RapidAPI-Key': 'c1bed9ec45msh5b49abb77b7300ep15fed0jsn0d8cca958638',
+		'X-RapidAPI-Key': 'c1bed9ec45msh5b49abb77b7300ep15fed0jsn0d8cca958638',
 
 		// college 
 		// 'X-RapidAPI-Key': '7f97c88be2mshb65b57c8d2913cdp1faf78jsn88326a15efcf',
@@ -225,81 +228,6 @@ async function displayMatches(url, matchContainer) {
 		});
 	});
 
-
-	// 	let renderMatchesCard = document.getElementsByClassName("live-card");
-	// 	renderMatchesCard = [...renderMatchesCard];
-
-	// 	renderMatchesCard.forEach(async renderMatchCard => {
-	// 		renderMatchCard.addEventListener('click', () => {
-	// 			tvSection.style.display = "flex";
-	// 			tvSection.style.flexDirection = "column";
-	// 			homeSection.style.display = "none";
-	// 			calendarSection.style.display = "none";
-
-
-	// 			let matchScoreCard = document.getElementById("match-scorecard")
-
-	// 			try {
-	// 				const response = await fetch(`https://cricbuzz-cricket.p.rapidapi.com/mcenter/v1/${matchId}/scard`, {
-	// 					method: 'GET',
-	// 					headers: {
-	// 						// 8
-	// 						// 'X-RapidAPI-Key': '85534a32e2msh413b9cae9a18949p1403e2jsn1f4d0abac534',
-	// 						// 789
-	// 						// 'X-RapidAPI-Key': 'c1bed9ec45msh5b49abb77b7300ep15fed0jsn0d8cca958638',
-	// 						//colelge
-	// 						'X-RapidAPI-Key': '7f97c88be2mshb65b57c8d2913cdp1faf78jsn88326a15efcf',
-
-	// 						'X-RapidAPI-Host': 'cricbuzz-cricket.p.rapidapi.com'
-	// 					}
-	// 				});
-	// 				const result = await response.json();
-	// 				console.log("result", result);
-
-	// 				let extractScoreCards = result.scoreCard //.batTeamDetails.batsmenData
-
-	// 				extractScoreCards.forEach(extractScoreCard => {
-	// 					let batsMansData = extractScoreCard.batTeamDetails.batsmenData;
-
-	// 					if (typeof batsMansData === 'object' && batsMansData !== null) {
-	// 						for (const key in batsMansData) {
-	// 							const batsManData = batsMansData[key];
-	// 							console.log(batsManData);
-
-	// 							let playerName = batsManData.batName;
-	// 							let playerRun = batsManData.runs;
-	// 							let playerBowl = batsManData.balls;
-	// 							let playerSix = batsManData.sixes;
-	// 							let playerFour = batsManData.fours;
-	// 							let playerStrikeRate = batsManData.strikeRate;
-
-	// 							console.log(playerName, playerBowl, playerRun, playerSix, playerFour, playerStrikeRate)
-
-	// 							if (playerRun) {
-	// 								matchScoreCard.innerHTML += `
-	// 								<tr>
-	// 									<td class="column-space" id="player-name">${playerName} </td>
-	// 									<td class="column-space" id="player-run">${playerRun}</td>
-	// 									<td class="column-space" id="player-bowl">${playerBowl}</td>
-	// 									<td class="column-space" id="player-six">${playerSix}</td>
-	// 									<td class="column-space" id="player-four">${playerFour}</td>
-	// 									<td class="column-space" id="player-strike-rate">${playerStrikeRate}</td>
-	// 								</tr>
-	// 							`;
-	// 							}
-	// 						}
-	// 					} else {
-	// 						console.error("batsMansData not found");
-	// 					}
-	// 				});
-	// 				console.log(renderMatchCard);
-	// 			} catch (error) {
-	// 				console.error(error);
-	// 				matchScoreCard.innerHTML += `<p>there was error loading the score card</p>`
-
-	// 			}
-	// 		})
-	// 	});
 
 
 	}
@@ -415,9 +343,9 @@ async function displayMatches(url, matchContainer) {
 				method: 'GET',
 				headers: {
 					// 8 
-					'X-RapidAPI-Key': '85534a32e2msh413b9cae9a18949p1403e2jsn1f4d0abac534',
+					//'X-RapidAPI-Key': '85534a32e2msh413b9cae9a18949p1403e2jsn1f4d0abac534',
 					// 789
-					// 'X-RapidAPI-Key': 'c1bed9ec45msh5b49abb77b7300ep15fed0jsn0d8cca958638',
+					 'X-RapidAPI-Key': 'c1bed9ec45msh5b49abb77b7300ep15fed0jsn0d8cca958638',
 
 					// college
 					// 'X-RapidAPI-Key': '7f97c88be2mshb65b57c8d2913cdp1faf78jsn88326a15efcf',
