@@ -63,10 +63,10 @@ async function fetchData(matchId) {
 		console.log("result", result);
 
 
-		let extractScoreCards = result.scoreCard //.batTeamDetails.batsmenData
+		let extractScoreCards = result.scoreCard[0] //.batTeamDetails.batsmenData
 
-		extractScoreCards.forEach(extractScoreCard => {
-			let batsMansData = extractScoreCard.batTeamDetails.batsmenData;
+		// extractScoreCards.forEach(extractScoreCard => {
+			let batsMansData = extractScoreCards.batTeamDetails.batsmenData;
 
 			if (typeof batsMansData === 'object' && batsMansData !== null) {
 				for (const key in batsMansData) {
@@ -98,7 +98,7 @@ async function fetchData(matchId) {
 			} else {
 				console.error("batsMansData not found");
 			}
-		});
+		// });
 
 	} catch (error) {
 		console.error(error);

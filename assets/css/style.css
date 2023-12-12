@@ -262,7 +262,7 @@ ul>li {
 .main-tv-content {
     padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -286,8 +286,7 @@ ul>li {
     background-color: #3c4d38;
     padding: 25px 40px;
     border-radius: 50px;
-    max-height: 450px;
-    /* flex: 1 0 200px; */
+    /* flex: 1 0 auto; */
 }
 
 .top-text{
@@ -339,9 +338,19 @@ table {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+.score-content{
+    display: flex;
+    justify-content: center;
 }
 
 /* BATTERS */
+
+.summary-card{
+    flex: 1 0 200px;
+}
 
 .batters {
     background-color: #5e725b;
@@ -511,6 +520,7 @@ table {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    flex: 1 0 300px;
 }
 
 .calendar-card .calendar {
@@ -529,4 +539,34 @@ table {
 
 .display-cards {
     display: none;
+}
+
+
+@media screen and (width< 1800px){
+    .extra-navigation{
+        display: none;
+    }
+    .nav-container{
+        height: auto;
+        width: 100%;
+        justify-content: center;
+        left: 0;
+    }
+    .nav-menu{
+        padding:0;
+    }
+    .nav-items{
+        display: flex;
+    }
+}
+
+
+@media screen and (width< 640px){
+    .main-container{
+        padding-left: 0;
+    }
+
+    .screen{
+        max-width: 350px;
+    }
 }
