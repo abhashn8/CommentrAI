@@ -45,8 +45,12 @@ let matchesLoaded = {
 }
 
 
-
-
+let playerOfTheMatch = document.getElementById("player-of-the-match")
+let matchStatus = document.getElementById("match-status")
+let extraBatting = document.getElementById("extra-batting")
+let extraBattingOvers = document.getElementById("extra-batting-overs")
+let batTeamName = document.getElementById("bat-team-name")
+let bowlingTeamName = document.getElementById("bowling-team-name")
 
 async function fetchData(matchId) {
 	let matchScoreCard = document.getElementById("match-scorecard");
@@ -55,15 +59,34 @@ async function fetchData(matchId) {
 		const response = await fetch(`https://cricbuzz-cricket.p.rapidapi.com/mcenter/v1/${matchId}/scard`, {
 			method: 'GET',
 			headers: {
-				'X-RapidAPI-Key': '7f97c88be2mshb65b57c8d2913cdp1faf78jsn88326a15efcf',
+				// 8 
+				'X-RapidAPI-Key': '85534a32e2msh413b9cae9a18949p1403e2jsn1f4d0abac534',
+				// 'X-RapidAPI-Key': '7f97c88be2mshb65b57c8d2913cdp1faf78jsn88326a15efcf',
 				'X-RapidAPI-Host': 'cricbuzz-cricket.p.rapidapi.com'
 			}
 		});
 		const result = await response.json();
 		console.log("result", result);
 
+		let menSummary = result.matchHeader.playersOfTheMatch[0].fullName
+		let batTeam = result.scoreCard[0].batTeamDetails.batTeamName
+		let bowlingTeam = result.scoreCard[0].bowlTeamDetails.bowlTeamName
 
+		batTeamName.innerText = batTeam
+		bowlingTeamName.innerText = bowlingTeam
+		let statusSummary = result.matchHeader.status
+		playerOfTheMatch.innerText = menSummary
+		matchStatus.innerText = statusSummary
+		console.log(menSummary)
 		let extractScoreCards = result.scoreCard[0] //.batTeamDetails.batsmenData
+
+		let battingWic = extractScoreCards.scoreDetails.wickets
+		let battingRuns = extractScoreCards.scoreDetails.runs
+		let battingRunRate = extractScoreCards.scoreDetails.runRate
+		let battingOvers = extractScoreCards.scoreDetails.overs
+
+		extraBatting.innerText = `${battingRuns} - ${battingWic}/ ${battingOvers}`
+		extraBattingOvers.innerText = battingRunRate
 
 		// extractScoreCards.forEach(extractScoreCard => {
 			let batsMansData = extractScoreCards.batTeamDetails.batsmenData;
@@ -112,13 +135,13 @@ const matchOptions = {
 	method: 'GET',
 	headers: {
 		// 8
-		// 'X-RapidAPI-Key': '85534a32e2msh413b9cae9a18949p1403e2jsn1f4d0abac534',
+		'X-RapidAPI-Key': '85534a32e2msh413b9cae9a18949p1403e2jsn1f4d0abac534',
 
 		// 789
 		// 'X-RapidAPI-Key': 'c1bed9ec45msh5b49abb77b7300ep15fed0jsn0d8cca958638',
 
 		// college 
-		'X-RapidAPI-Key': '7f97c88be2mshb65b57c8d2913cdp1faf78jsn88326a15efcf',
+		// 'X-RapidAPI-Key': '7f97c88be2mshb65b57c8d2913cdp1faf78jsn88326a15efcf',
 
 
 		'X-RapidAPI-Host': 'cricbuzz-cricket.p.rapidapi.com'
@@ -392,12 +415,12 @@ async function displayMatches(url, matchContainer) {
 				method: 'GET',
 				headers: {
 					// 8 
-					// 'X-RapidAPI-Key': '85534a32e2msh413b9cae9a18949p1403e2jsn1f4d0abac534',
+					'X-RapidAPI-Key': '85534a32e2msh413b9cae9a18949p1403e2jsn1f4d0abac534',
 					// 789
 					// 'X-RapidAPI-Key': 'c1bed9ec45msh5b49abb77b7300ep15fed0jsn0d8cca958638',
 
 					// college
-					'X-RapidAPI-Key': '7f97c88be2mshb65b57c8d2913cdp1faf78jsn88326a15efcf',
+					// 'X-RapidAPI-Key': '7f97c88be2mshb65b57c8d2913cdp1faf78jsn88326a15efcf',
 
 					'X-RapidAPI-Host': 'cricbuzz-cricket.p.rapidapi.com'
 				}

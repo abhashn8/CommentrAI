@@ -350,6 +350,7 @@ table {
 
 .summary-card{
     flex: 1 0 200px;
+    justify-content:  center;
 }
 
 .batters {
@@ -568,5 +569,9 @@ table {
 
     .screen{
         max-width: 350px;
+    }
+    .scoreboard{
+        padding: 25px 10px ;
+        border-radius: 20px;
     }
 }
