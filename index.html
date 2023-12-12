@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CommentrAI</title>
+    <script src="https://kit.fontawesome.com/1d29b1193f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="pre-loader">
+        <div id="spin-box"></div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="inner-container">
+
+            <div class="nav-container">
+                <div class="nav-menu">
+                    <ul class="nav-items">
+                        <li class="nav-link" id="home-link">
+                            <a href="#home-section">
+                                <i class="fa-solid fa-house"></i>
+                            </a>
+                        </li>
+                        <li class="nav-link" id="tv-link">
+                            <a href="#tv-section">
+                                <i class="fa-solid fa-tv"></i> </a>
+                        </li>
+                        <li class="nav-link" id="calendar-link">
+                            <a href="#calender-section">
+                                <i class="fa-solid fa-calendar-day"></i>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class="fa-solid fa-gear"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="extra-navigation">
+                <div class="search-box">
+                    <div class="search-form-container">
+                        <span class="search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <form action="" class="search-form">
+                            <input type="text" name="search_field" id="search-field" placeholder="T20, World Cup..." autocomplete="off">
+                        </form>
+                        <span class="search-btn">
+                            <i class="fa-solid fa-microphone"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <!-- HOME SECTION -->
+                <div class="home-container" id="home-section">
+                    <div class="filter-bar">
+                        <div class="filter-tags">
+                            <div class="tag-btn" id="live-btn">LIVE</div>
+                            <div class="tag-btn" id="recent-btn">RECENT</div>
+                            <div class="tag-btn" id="incoming-btn">INCOMING</div>
+                        </div>
+                    </div>
+                    <div class="live-matches" id="live-matches">
+                        <div class="live-cards" id="live-cards">
+                            <!-- <div class="live-card">
+                                <div class="match-teams">India vs Pakistan</div>
+                                <span class="series-name">Indian Premier League</span>
+                                <span class="match-series">Vijayawada, Chukkapalli Pitchaiah Cricket Ground,
+                                    Mulapadu</span> 
+                                <div class="match-setting"><span class="match-date">Nov 20, 2023</span> &bull; <span
+                                        class="match-time">3:00PM - 4:50PM</span> </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="recent" id="recent-matches">
+                        <div class="recent-cards" id="recent-cards">
+                        </div>
+                    </div>
+                    <div class="incoming" id="incoming-matches">
+                        <div class="incoming-cards" id="incoming-cards">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TV-SECTION -->
+                <div class="tv-container display-section" id="tv-section">
+
+                    <div class="main-tv-content">
+                        <div class="screen">
+                            <img src="assets/imgs/ausvsind.webp" alt="">
+                        </div>
+                        <div class="scoreboard">
+                            <h3 class="top-text"> SCOREBOARD</h3>
+                            <div class="teams">
+                                <span class="team score-active">
+                                    Australia
+                                </span>
+                                <span class="team">
+                                    India
+                                </span>
+
+                            </div>
+                            <div class="score-content">
+                                <table class="score-table">
+                                    <thead>
+                                        <th class="column-space">Batting</th>
+                                        <th class="column-space">R</th>
+                                        <th class="column-space">B</th>
+                                        <th class="column-space">6s</th>
+                                        <th class="column-space">4s</th>
+                                        <th class="column-space">S/R</th>
+                                    </thead>
+                                    <tbody id="match-scorecard">
+                                        <!-- <tr>
+                                            <td class="column-space" id="player-name">Alfreds </td>
+                                            <td class="column-space" id="player-run">5</td>
+                                            <td class="column-space" id="player-bowl">5</td>
+                                            <td class="column-space" id="player-six">5 </td>
+                                            <td class="column-space" id="player-four">5</td>
+                                            <td class="column-space" id="player-strike-rate">5</td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="summary-content">
+
+                        <div class="batters">
+                            <div class="batsman">
+                                <span class="batsman-image">
+                                    <img src="assets/imgs/ST.jpg" alt="">
+                                </span>
+                                <p>Abhash Niroula</p>
+                                <span class="run-per-ball">
+                                    220 <span class="balls">(97)</span>
+                                </span>
+                            </div>
+
+                            <div class="batsman">
+                                <span class="batsman-image">
+                                    <img src="assets/imgs/virat.jpeg" alt="">
+                                </span>
+                                <p>Virat Kohli</p>
+                                <span class="run-per-ball">
+                                    45<span class="balls">(61)</span>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div class="batting">
+
+                            <div class="team-on-field">
+                                <span class="batting-img">
+                                    <img src="assets/imgs/aus.webp" alt="">
+                                </span>
+                                <p>
+                                    AUS batting
+                                </p>
+                            </div>
+                            <div class="batting-score">
+                                <span class="scores"><b>140-8</b></span>&nbsp;&nbsp;&nbsp;
+                                <span class="scores balls">(30.4)</span>
+                            </div>
+                            <div>
+                                <p>
+                                    AUS choose to bat .CRR: 5.2
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="bowling">
+
+                            <div class="team-on-field">
+                                <span class="bowling-img">
+                                    <img src="assets/imgs/ind.webp" alt="">
+                                </span>
+                                <p>
+                                    IND bowling
+                                </p>
+                            </div>
+                            <div class="bowler">
+
+                                R. Jadeja 1/31<span class="balls">(5.4)</span>
+
+                            </div>
+                            <div class="balls">
+                                <span class="ball"></span>
+                                <span class="ball"></span>
+                                <span class="ball"></span>
+                                <span class="ball"></span>
+                                <span class="ball"></span>
+                                <span class="ball"></span>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CALENDER SECTION -->
+
+
+                <div class="calendar-container display-section" id="calendar-section">
+                    <!-- <div class="filter-bar">
+                        <div class="filter-tags">
+                            <div class="tag-btn" id="recent-btn">RECENT EVENTS</div>
+                            <div class="tag-btn" id="upcoming-btn">UPCOMING EVENTS</div>
+                        </div>
+                    </div> -->
+                    <div class="recent-events cal-events" id="cal-events">
+                        <div class="recent-events-cards" id="recent-events-cards">
+                            <!-- <div class="event-card">
+                                <div class="event">ICC T20 World Cup </div>
+                                <div class="match-setting"><span class="match-date">November 2022 </span> </div>
+                                <span class="winners">Winners - England</span>
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="assets/js/script.js"></script>
+
+<script src="assets/js/img-script.js"></script>
+<link rel="stylesheet" href="assets/css/style.css">
+
+</html>
+
+
+
+
