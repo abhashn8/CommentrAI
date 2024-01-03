@@ -19,4 +19,5 @@ Cricket Info Hub is a web application that provides users with comprehensive inf
 
 ## Live Demo
 
+[!LetsCric](https://abhashn8.github.io/LetsCric)
 ## Features
